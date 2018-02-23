@@ -1,0 +1,213 @@
+.inner{
+      color: white
+ }
+
+:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $REST
+\*------------------------------------*/
+body {
+  font-size: 6px;
+}
+
+ul.gameCenter {
+  position: absolute;
+  
+  height: 30em;
+  width: 30em;
+  margin-left: 2em;
+  margin-top: 6em;
+  /* border-radius: 11em;
+  border: 2px solid #e0e0e0; */
+}
+ul.gameCenter li {
+  position: absolute;
+  list-style: none;
+  
+  display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+}
+ul.gameCenter li:nth-child(4n) {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1d62f0), color-stop(100%, #1ad6fd));
+  background: -webkit-linear-gradient(top, #1d62f0 0%, #1ad6fd 100%);
+  width: 30em;
+  height: 30em;
+  border-radius: 15em;
+  top: 6em;
+  left: 4em;
+  overflow: hidden;
+  z-index: 3;
+}
+ul.gameCenter li:nth-child(4n):before, ul.gameCenter li:nth-child(4n):after {
+  content: "";
+  position: absolute;
+}
+ul.gameCenter li:nth-child(4n):before {
+  top: 0;
+  left: 14em;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4a9219), color-stop(100%, #6bb635));
+  background: -webkit-linear-gradient(top, #4a9219 0%, #6bb635 100%);
+  width: 23em;
+  height: 23em;
+  border-radius: 11.5em;
+}
+ul.gameCenter li:nth-child(4n):after {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8447f6), color-stop(100%, #654de6));
+  background: -webkit-linear-gradient(top, #8447f6 0%, #654de6 100%);
+  width: 15em;
+  height: 15em;
+  border-radius: 7.5em;
+  top: 23em;
+  left: 6em;
+}
+ul.gameCenter li:nth-child(4n + 1) {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFDB4C), color-stop(100%, #FFCD02));
+  background: -webkit-linear-gradient(top, #FFDB4C 0%, #FFCD02 100%);
+  width: 12em;
+  height: 12em;
+  border-radius: 7.5em;
+  top: 0em;
+  left: －10em;
+  z-index: 1;
+}
+ul.gameCenter li:nth-child(4n + 2) {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #C644FC), color-stop(100%, #5856d6));
+  background: -webkit-linear-gradient(top, #C644FC 0%, #5856d6 100%);
+  width: 12em;
+  height: 12em;
+  border-radius: 7.5em;
+  top: 5em;
+  left: 5em;
+  z-index: 2;
+}
+ul.gameCenter li:nth-child(4n + 3) {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FF5E3A), color-stop(100%, #FF2A68));
+  background: -webkit-linear-gradient(top, #FF5E3A 0%, #FF2A68 100%);
+  width: 12em;
+  height: 12em;
+  border-radius: 7.5em;
+  top: 10em;
+  left: 5em;
+  opacity: 0.95;
+  z-index: 4;
+}
+
+/*------------------------------------*\
+    $ANIMATIONS
+\*------------------------------------*/
+li:nth-child(4n) {
+  -webkit-animation: ballOne 15s infinite;
+}
+
+@-webkit-keyframes ballOne {
+  0% {
+    -webkit-transform: translateX(0) translateY(0);
+  }
+  40% {
+    -webkit-transform: translateX(-4em) translateY(-4em);
+  }
+  80% {
+    -webkit-transform: translateX(4em) translateY(4em);
+  }
+}
+li:nth-child(4n + 1) {
+  -webkit-animation: ballTwo 15s infinite;
+}
+
+@-webkit-keyframes ballTwo {
+  0% {
+    -webkit-transform: translateX(0) translateY(0);
+  }
+  40% {
+    -webkit-transform: translateX(4em) translateY(4em) ;
+  }
+  80% {
+    -webkit-transform: translateX(-2em) translateY(-2em);
+  }
+}
+li:nth-child(4n):before {
+  -webkit-animation: ballBefore 15s infinite;
+}
+
+@-webkit-keyframes ballBefore {
+  0% {
+    -webkit-transform: translateX(0) translateY(0);
+  }
+  40% {
+    -webkit-transform: translateX(-9em) translateY(-7em) scale(0.75);
+  }
+  80% {
+    -webkit-transform: translateX(0) translateY(-2em);
+  }
+}
+li:nth-child(4n + 2) {
+  -webkit-animation: ballThree 15s infinite;
+}
+
+@-webkit-keyframes ballThree {
+  0% {
+    -webkit-transform: translateX(0) translateY(0);
+  }
+  40% {
+    -webkit-transform: translateX(3em) translateY(-4em) ;
+  }
+  80% {
+    -webkit-transform: translateX(2em) translateY(2em);
+  }
+}
+li:nth-child(4n):after {
+  -webkit-animation: ballAfter 15s infinite;
+}
+
+@-webkit-keyframes ballAfter {
+  0% {
+    -webkit-transform: translateX(0) translateY(0);
+  }
+  40% {
+    -webkit-transform: translateX(9em) translateY(-4em) scale(0.75);
+  }
+  80% {
+    -webkit-transform: translateX(-8em) translateY(-9em);
+  }
+}
+li:nth-child(4n + 3) {
+  -webkit-animation: ballFour 15s infinite;
+}
+
+@-webkit-keyframes ballFour {
+  0% {
+    -webkit-transform: rotate(0) translateX(0) translateY(0);
+    -webkit-transform-origin: 0 0;
+  }
+  40% {
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: rotate(50deg) translateX(-2em) translateY(-6em) ;
+  }
+  80% {
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: rotate(-90) translateX(5em) translateY(0em);
+  }
+}
+li:nth-child(4n):before,
+li:nth-child(4n):after,
+li:nth-child(4n),
+li:nth-child(4n + 1),
+li:nth-child(4n + 2),
+li:nth-child(4n + 3) {
+  -webkit-transition-timing-function: linear;
+}

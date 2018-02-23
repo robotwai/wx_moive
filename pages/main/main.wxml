@@ -1,0 +1,13 @@
+<view>
+<ul class="gameCenter">
+	<li bindtap="bindViewTap1"><div class="inner">
+        最近热映
+    </div></li>
+	<li bindtap="bindViewTap2"><div class="inner">
+        经典好片
+    </div></li>
+    	<li bindtap="bindViewTap3"><div class="inner">
+        观看历史
+    </div></li>
+</ul>
+</view> 
