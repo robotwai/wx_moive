@@ -6,9 +6,9 @@ Page({
   },
   //事件处理函数
   bindViewTap1: function () {
-   wx.showToast({
-     title: '最近热映',
-   })
+    wx.navigateTo({
+      url: '../list/list'
+    })
   },
   bindViewTap2: function () {
     wx.showToast({
